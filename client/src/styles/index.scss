@@ -1,0 +1,105 @@
+@import "variables";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.75em;
+}
+
+body {
+  font-family: $font-normal;
+
+  color: $c-on-dark-text;
+  background-size: cover;
+  background-color: $c-on-dark-background;
+  background-image: url("./content/backgrounds/bg-dark-1.svg");
+
+  overflow-x: hidden;
+}
+
+footer {
+  border-top: dotted 1px $c-accent;
+  box-shadow: 0px 0px 1em black;
+}
+
+a {
+  opacity: 0.8;
+  color: $c-accent;
+  border-bottom: solid 1px $c-transparent;
+
+  cursor: pointer;
+  transition: $transition-properties-default;
+
+  &:hover {
+    opacity: 1;
+    border-bottom: solid 1px $c-accent-hover;
+    color: $c-accent-hover;
+  }
+}
+
+button {
+  font-weight: bold;
+
+  border-radius: $border-radius-default;
+  padding: 0.25em;
+  background-color: $c-accent;
+  transition: $transition-properties-default;
+
+  img {
+    transition: $transition-properties-default;
+    width: 1.5em;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    background-color: $c-accent-hover;
+  }
+  &:active {
+    transform: translateY(0px);
+    filter: brightness(50%);
+  }
+}
+
+.activated {
+  opacity: 1;
+  font-weight: bold;
+  pointer-events: none;
+}
+.divider {
+  scale: 25%;
+}
+.box-info {
+  background-color: $c-on-dark-background;
+  box-shadow: 0px 0px 2em black;
+  border-radius: $border-radius-default;
+  border: solid 1px $c-accent;
+}
+.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}

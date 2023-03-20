@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+$font-title: "Noto Serif", sans-serif;
+$font-normal: "Titillium Web", sans-serif;
+
+$c-on-dark-text: white;
+$c-on-dark-background: rgb(31, 24, 31);
+$c-transparent: rgba(0, 0, 0, 0);
+$c-accent: rgb(255, 0, 81);
+$c-accent-hover: rgb(255, 0, 179);
+
+$border-radius-default: 0.2em;
+
+$transition-properties-default: all 0.25s ease;

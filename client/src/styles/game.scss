@@ -1,0 +1,112 @@
+@import "variables";
+@import "animations";
+
+#game-layout {
+  transition: $transition-properties-default;
+}
+
+#dialogue-box {
+  font-family: $font-title;
+  font-style: italic;
+  font-size: 1.25em;
+
+  text-shadow: 0px 0px 8px black;
+
+  animation-name: anim-fade-out;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 3s; /* add a delay of 3 seconds */
+  animation-fill-mode: forwards;
+}
+
+.risk-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border: solid 1px $c-transparent;
+  border-radius: $border-radius-default;
+  background-color: $c-on-dark-background;
+  width: 4em;
+  height: 3em;
+  overflow: hidden;
+
+  cursor: pointer;
+  transition: $transition-properties-default;
+
+  &:hover {
+    border: solid 1px $c-accent;
+    transform: translateY(-4px);
+  }
+  &:active {
+    border: solid 1px $c-accent-hover;
+    opacity: 0.5;
+    transform: translateY(0px);
+  }
+}
+
+.hp-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 2em;
+  height: 3em;
+  overflow: hidden;
+
+  transition: $transition-properties-default;
+  border-radius: $border-radius-default;
+
+  background-color: $c-on-dark-background;
+  background-image: url("../content/images/card-cover-hp.svg");
+  background-size: cover;
+
+  opacity: 1;
+}
+.hp-card-risk {
+  transform: translateY(-4px);
+  opacity: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: anim-danger-flash 2s infinite;
+    z-index: 1;
+  }
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 2em;
+
+  border-radius: $border-radius-default;
+  background-color: $c-on-dark-background;
+  transition: $transition-properties-default;
+
+  width: 2em;
+  height: 3em;
+  overflow: hidden;
+}
+.game-card:last-child {
+  background-image: url("../content/images/card-cover.svg");
+  background-size: cover;
+}
+
+.danger {
+  color: $c-accent;
+}

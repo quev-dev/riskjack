@@ -1,0 +1,13 @@
+@import "variables";
+
+$mobile-screen: 768px;
+@media (max-width: $mobile-screen) {
+  // Make game elements smaller
+  .game-card {
+    font-size: 1.5em;
+  }
+  .risk-card {
+    width: 3em;
+    height: 2em;
+  }
+}
