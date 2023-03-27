@@ -85,6 +85,18 @@ button {
   }
 }
 
+input {
+  border-radius: $border-radius-default;
+  background-color: $c-on-dark-background;
+  border: solid 1px $c-transparent;
+  transition: $transition-properties-default;
+  padding: 0.5em;
+  &:focus {
+    border: solid 1px $c-accent;
+    outline: none;
+  }
+}
+
 .activated {
   opacity: 1;
   font-weight: bold;
