@@ -5,7 +5,7 @@ import Divider from "../components/Divider";
 import Sockets from "../components/Sockets";
 import ReduxExample from "../components/ReduxExample";
 
-export default function Home() {
+export default function Home({socket}) {
   return (
     <main id="home">
       <Nav />
@@ -19,7 +19,7 @@ export default function Home() {
 
       <Divider />
 
-      <Sockets></Sockets>
+      <Sockets socket={socket}></Sockets>
 
       <article className="m-8 box-info p-8">
         <h2>How to Play 📜</h2>

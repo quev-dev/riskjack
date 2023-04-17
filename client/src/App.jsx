@@ -6,12 +6,13 @@ import Loading from "./pages/Loading";
 
 const socket = io("http://localhost:3001", {
   extraHeaders: {
-    user_id: sessionStorage.getItem("user_id"),
-    game_id: sessionStorage.getItem("game_id"),
+    'user_id': sessionStorage.getItem("user_id") ?? '',
+    'game_id': sessionStorage.getItem("game_id") ?? '',
   },
 });
 
 socket.on("pass_ids", (userID, gameID) => {
+  console.log('passed ids: ', userID, gameID)
   sessionStorage.setItem("user_id", userID);
   sessionStorage.setItem("game_id", gameID);
 });
@@ -26,7 +27,7 @@ export default function App() {
     <>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home socket={socket} />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/find-game" element={<FindGame />} />
           <Route path="*" element={<NotFound />} />
