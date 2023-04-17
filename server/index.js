@@ -17,22 +17,12 @@ const io = new Server(server, {
   },
 });
 
-import store from "./app/.store.js";
-import {
-  increment,
-  selectExample,
-} from "./app/redux-reducers/example.reducer.js";
-
-// * LISTEN TO EVENTS
-// User connected
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
   socket.on("test_redux", (data) => {
     console.log(data);
   });
 });
-
-// 'Sockets' component example
 
 server.listen(3001, () => {
   console.log("--- SERVER IS RUNNING");
