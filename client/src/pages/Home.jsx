@@ -5,15 +5,16 @@ import Divider from "../components/Divider";
 import Sockets from "../components/Sockets";
 import ReduxExample from "../components/ReduxExample";
 
-export default function Home({socket}) {
+export default function Home({ socket }) {
   return (
     <main id="home">
       <Nav />
 
-      <header className="flex flex-col text-center my-12">
-        <h1>RiskJack</h1>
+      <header className="flex flex-col text-center my-12 mx-8">
+        <h1>Riskjack</h1>
         <p>
-          <i>An ever so slightly modified version of BlackJack.</i>
+          Take wild risks as you attempt to outsmart your opponent in this online,
+          two-player card game.
         </p>
       </header>
 
@@ -21,40 +22,35 @@ export default function Home({socket}) {
 
       <Sockets socket={socket}></Sockets>
 
-      <article className="m-8 box-info p-8">
+      <article className="flex flex-col gap-4 m-8 box-info p-8 md:w-1/2 md:mx-auto">
         <h2>How to Play 📜</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor
-          sit, amet consectetur adipisicing. Lorem ipsum dolor sit amet,
-          consectetur adipisicing. Lorem ipsum, dolor sit amet consectetur
-          adipisicing. Lorem, ipsum dolor sit amet consectetur adipisicing.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor
-          sit, amet consectetur adipisicing. Lorem ipsum dolor sit amet,
-          consectetur adipisicing. Lorem ipsum, dolor sit amet consectetur
-          adipisicing. Lorem, ipsum dolor sit amet consectetur adipisicing.
+          Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit, amet
+          consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.
+          Lorem ipsum, dolor sit amet consectetur adipisicing. Lorem, ipsum dolor sit amet
+          consectetur adipisicing.
         </p>
       </article>
 
       <Divider />
 
-      <section className="m-8">
-        <h2>Practice 🫰</h2>
-        <p>
-          Practice against an <b>AI</b> to become familiar with the game.
-        </p>
-        <a href="/practice">Begin</a>
+      <section className="flex flex-col gap-1 m-8 md:w-1/2 md:mx-auto">
+        <h2>Practice</h2>
+        <p>Practice against an AI to become familiar with the game.</p>
+        <a className="max-w-max" href="/practice">
+          Begin
+        </a>
       </section>
 
-      <section className="m-8">
-        <h2>Play the Game 🤝</h2>
+      <section className="flex flex-col gap-1 m-8 md:w-1/2 md:mx-auto">
+        <h2>Play the Game</h2>
         <p>
-          Whenever you're ready, you can search for an opponent through a{" "}
-          <b>room ID</b> or <b>matchmaking queue</b>. Good luck, and play your
-          cards right!
+          Whenever you're ready, you can search for an opponent through a room ID or
+          matchmaking queue. Good luck, and play your cards right!
         </p>
-        <a href="/search">Find an Opponent</a>
+        <a className="max-w-max" href="/search">
+          Find an Opponent
+        </a>
       </section>
 
       <Divider />

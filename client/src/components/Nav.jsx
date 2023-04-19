@@ -32,7 +32,7 @@ export default function Nav() {
       id="navbar"
       className="flex sticky top-0 justify-between items-center px-8 py-3 animate__animated animate__fadeInDown"
     >
-      <h4>🃏 RiskJack</h4>
+      <h4>Riskjack</h4>
       {!showHamburger && (
         <ul className="flex flex-row gap-4">
           {links.map((link) => (

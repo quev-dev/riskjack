@@ -48,27 +48,22 @@ h6 {
   font-family: $font-title;
 }
 h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 3em;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 h4 {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 h5 {
-  font-size: 1em;
+  font-size: 1.25em;
 }
 h6 {
   font-size: 0.75em;
-}
-
-footer {
-  border-top: dotted 1px $c-accent;
-  box-shadow: 0px 0px 1em black;
 }
 
 a {
@@ -111,12 +106,12 @@ button {
 
 input {
   border-radius: $border-radius-default;
-  background-color: $c-on-dark-background;
-  border: solid 1px $c-transparent;
+  background-color: $c-on-dark-background-light;
+  border: solid 2px $c-transparent;
   transition: $transition-properties-default;
   padding: 0.5em;
   &:focus {
-    border: solid 1px $c-accent;
+    border: solid 2px $c-accent;
     outline: none;
   }
 }
@@ -126,16 +121,15 @@ input {
   font-weight: bold;
   pointer-events: none;
 }
-.divider {
-  scale: 25%;
-}
 .box-info {
-  background-color: $c-on-dark-background;
-  box-shadow: 0px 0px 2em black;
+  background-color: $c-on-dark-background-light;
   border-radius: $border-radius-default;
-  border: solid 1px $c-accent;
 }
 .inactive {
   opacity: 0.5;
   pointer-events: none;
 }
+
+// .divider {
+//   scale: 25%;
+// }
