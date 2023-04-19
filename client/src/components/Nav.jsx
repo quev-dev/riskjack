@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import icList from "../content/icons/list.svg";
+import icList from "../content/svgs/list.svg";
 import { Transition } from "@headlessui/react";
 
 export default function Nav() {

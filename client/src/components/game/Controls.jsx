@@ -1,5 +1,5 @@
-import icStay from "../../content/icons/stay.svg";
-import icHit from "../../content/icons/hit.svg";
+import icStay from "../../content/svgs/stay.svg";
+import icHit from "../../content/svgs/hit.svg";
 
 export default function Controls() {
   return (

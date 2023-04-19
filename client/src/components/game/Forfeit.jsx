@@ -1,4 +1,4 @@
-import icForfeit from "../../content/icons/forfeit.svg";
+import icForfeit from "../../content/svgs/forfeit.svg";
 
 export default function Forfeit() {
   return (

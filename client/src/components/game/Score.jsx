@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectGame } from "../../app/redux-reducers/game.reducer.js";
 
-import icDanger from "../../content/icons/danger.svg";
+import icDanger from "../../content/svgs/danger.svg";
 
 export default function Score({ cardTotal = 5 }) {
   const game = useSelector(selectGame);

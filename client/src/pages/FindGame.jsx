@@ -1,7 +1,7 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
-import icSearch from "../content/icons/search.svg";
+import icSearch from "../content/svgs/search.svg";
 
 export default function FindGame() {
   return (
@@ -19,9 +19,8 @@ export default function FindGame() {
         <div className="w-full">
           <h4>🏠 Create Room</h4>
           <p>
-            You may create a private room - a password will be listed at the
-            top. Anyone who provides the password for the "private room" option
-            will be able to join.
+            You may create a private room - a password will be listed at the top. Anyone
+            who provides the password for the "private room" option will be able to join.
           </p>
           <button className="mt-1">Create Room</button>
         </div>

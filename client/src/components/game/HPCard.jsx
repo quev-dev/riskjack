@@ -1,4 +1,4 @@
-import icHeart from "../../content/icons/heart.svg";
+import icHeart from "../../content/svgs/heart.svg";
 
 export default function HPCard({ atRisk = false }) {
   const hpCardClass = atRisk ? "hp-card-risk" : "";

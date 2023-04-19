@@ -1,6 +1,6 @@
-import icTwitter from "../content/icons/twitter.svg";
-import icInstagram from "../content/icons/instagram.svg";
-import icFacebook from "../content/icons/facebook.svg";
+import icTwitter from "../content/svgs/twitter.svg";
+import icInstagram from "../content/svgs/instagram.svg";
+import icFacebook from "../content/svgs/facebook.svg";
 
 export default function Footer() {
   return (

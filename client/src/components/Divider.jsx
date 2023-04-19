@@ -1,4 +1,4 @@
-import imgDivider from "../content/divider.svg";
+import imgDivider from "../content/svgs/divider.svg";
 
 export default function Divider() {
   return (
