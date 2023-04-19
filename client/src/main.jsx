@@ -8,10 +8,10 @@ import { Provider } from "react-redux";
 
 import "normalize.css";
 import "animate.css";
-import "./styles/index.scss";
-import "./styles/sections.scss";
-import "./styles/game.scss";
-import "./styles/resize.scss";
+import "./sass/index.scss";
+import "./sass/sections.scss";
+import "./sass/game.scss";
+import "./sass/resize.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

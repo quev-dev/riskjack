@@ -8,12 +8,12 @@
 risk cards would be displayed somewhere on the side.
 */
 
-import Cards from "./layouts/Cards";
-import RiskCards from "./layouts/RiskCards";
-import HP from "./layouts/HP";
-import Controls from "./layouts/Controls";
-import Forfeit from "./layouts/Forfeit";
-import Dialogue from "./layouts/Dialogue";
+import Cards from "./Cards";
+import RiskCards from "./RiskCards";
+import HP from "./HP";
+import Controls from "./Controls";
+import Forfeit from "./Forfeit";
+import Dialogue from "./Dialogue";
 
 export default function GameLayout() {
   return (

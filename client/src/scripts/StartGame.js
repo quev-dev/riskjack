@@ -1,9 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectGame } from "../../app/redux-reducers/game.reducer.js";
-import {
-  addCard,
-  selectPlayers,
-} from "../../app/redux-reducers/players.reducer.js";
+import { selectGame } from "../app/redux-reducers/game.reducer.js";
+import { addCard, selectPlayers } from "../app/redux-reducers/players.reducer.js";
 
 export default function StartGame() {
   const players = useSelector(selectPlayers);

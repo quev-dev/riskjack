@@ -1,5 +1,5 @@
 import Card from "./Card";
-import Score from "../layouts/Score";
+import Score from "./Score";
 
 import { useSelector } from "react-redux";
 import { selectPlayers } from "../../app/redux-reducers/players.reducer";

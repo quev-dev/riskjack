@@ -29,30 +29,18 @@ export default function HP() {
 
   return (
     <section className="mb-4 flex flex-row gap-2 items-center justify-center">
-      <button
-        onClick={() => dispatch(changeHP({ player: "player1", amount: -1 }))}
-      >
+      <button onClick={() => dispatch(changeHP({ player: "player1", amount: -1 }))}>
         -
       </button>
-      <button
-        onClick={() => dispatch(changeHP({ player: "player1", amount: 1 }))}
-      >
+      <button onClick={() => dispatch(changeHP({ player: "player1", amount: 1 }))}>
         +
       </button>
       {hpCards}
       <div className="flex flex-col gap-1">
-        <button
-          onClick={() =>
-            dispatch(changeHPRisk({ player: "player1", amount: 1 }))
-          }
-        >
+        <button onClick={() => dispatch(changeHPRisk({ player: "player1", amount: 1 }))}>
           +
         </button>
-        <button
-          onClick={() =>
-            dispatch(changeHPRisk({ player: "player1", amount: -1 }))
-          }
-        >
+        <button onClick={() => dispatch(changeHPRisk({ player: "player1", amount: -1 }))}>
           -
         </button>
       </div>
