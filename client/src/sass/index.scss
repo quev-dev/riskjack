@@ -4,6 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* Firefox */
+  scrollbar-color: $c-accent $c-on-dark-background;
+  scrollbar-width: thin;
+
+  /* WebKit */
+  &::-webkit-scrollbar {
+    background-color: $c-on-dark-background;
+    width: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $c-accent;
+    border-radius: 100vw;
+    border: solid 2px $c-on-dark-background;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $c-accent;
+    margin-block: 0.5em;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: $c-accent;
+  }
+}
+
+body {
+  font-family: $font-normal;
+
+  color: $c-on-dark-text;
+  background-size: cover;
+  background-color: $c-on-dark-background;
+  background-image: url("./content/backgrounds/bg-dark-1.svg");
+
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -29,17 +64,6 @@ h5 {
 }
 h6 {
   font-size: 0.75em;
-}
-
-body {
-  font-family: $font-normal;
-
-  color: $c-on-dark-text;
-  background-size: cover;
-  background-color: $c-on-dark-background;
-  background-image: url("./content/backgrounds/bg-dark-1.svg");
-
-  overflow-x: hidden;
 }
 
 footer {
