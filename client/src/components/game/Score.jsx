@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectGame } from "../../app/redux-reducers/game.reducer.js";
-
 import icDanger from "../../content/svgs/danger.svg";
 
-export default function Score({ cardTotal = 5 }) {
-  const game = useSelector(selectGame);
-  const countLimit = game.Goal;
+export default function Score({ cardTotal = 5, countLimit = 5 }) {
   const [over, setOver] = useState(false);
 
   useEffect(() => {

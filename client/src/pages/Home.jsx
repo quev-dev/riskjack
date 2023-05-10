@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import Divider from "../components/Divider";
 
 import Sockets from "../components/Sockets";
-import ReduxExample from "../components/ReduxExample";
 
 export default function Home({ socket }) {
   return (

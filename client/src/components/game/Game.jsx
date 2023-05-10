@@ -1,13 +1,3 @@
-/*
-* Opponent HP
-* Opponent cards
-* Your cards
-* Your risk cards
-* Your HP
-* Controls
-risk cards would be displayed somewhere on the side.
-*/
-
 import Cards from "./Cards";
 import RiskCards from "./RiskCards";
 import HP from "./HP";
@@ -20,7 +10,7 @@ export default function GameLayout() {
     <main id="game-layout">
       <section className="m-2"></section>
 
-      <Dialogue text="I'm gonna stay."></Dialogue>
+      <Dialogue text="[Sample dialogue]" />
 
       <section className="m-2">
         <Cards></Cards>
