@@ -1,0 +1,15 @@
+{
+  "name": "riskjack",
+  "version": "1.0.0",
+  "description": "Riskjack is a **work-in-progress**, full-stack web application where two players can play a modified, chaotic version of Blackjack online.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
+}
