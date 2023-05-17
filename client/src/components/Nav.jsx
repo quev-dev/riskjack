@@ -9,7 +9,7 @@ export default function Nav() {
   const links = [
     { name: 'Home', to: '/' },
     { name: 'Practice', to: '/practice' },
-    { name: 'Find Opponent', to: '/find-game' },
+    { name: 'Find Game', to: '/find-game' },
   ];
 
   useEffect(() => {
@@ -29,12 +29,12 @@ export default function Nav() {
 
   return (
     <nav
-      id='navbar'
-      className='flex sticky top-0 justify-between items-center px-8 py-3 animate__animated animate__fadeInDown'
+      id="navbar"
+      className="flex sticky top-0 justify-between items-center px-8 py-3 animate__animated animate__fadeInDown"
     >
-      <h4 id='nav-title'>Riskjack</h4>
+      <h4 id="nav-title">Riskjack</h4>
       {!showHamburger && (
-        <ul className='flex flex-row gap-4'>
+        <ul className="flex flex-row gap-4">
           {links.map((link) => (
             <li key={link.name}>
               <a
@@ -51,22 +51,22 @@ export default function Nav() {
       {showHamburger && (
         <section>
           <button
-            id='nav-button'
-            className='flex flex-row gap-1'
+            id="nav-button"
+            className="flex flex-row gap-1"
             onClick={handleDropdownClick}
           >
-            <img src={icList} alt='Hamburger/dropdown icon' />
+            <img src={icList} alt="Hamburger/dropdown icon" />
           </button>
           <Transition
             show={showDropdown}
-            enter='transition ease-out duration-200 transform'
-            enterFrom='opacity-0 scale-95'
-            enterTo='opacity-100 scale-100'
-            leave='transition ease-in duration-75 transform'
-            leaveFrom='opacity-100 scale-100'
-            leaveTo='opacity-0 scale-95'
+            enter="transition ease-out duration-200 transform"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in duration-75 transform"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
           >
-            <ul id='nav-dropdown' className='box-info absolute top-2 right-0'>
+            <ul id="nav-dropdown" className="box-info absolute top-2 right-0">
               {links.map((link) => (
                 <li key={link.name}>
                   <a

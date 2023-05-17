@@ -1,4 +1,4 @@
-import HPCard from "./HPCard";
+import HPCard from './HPCard';
 
 export default function HP(hpCount = 5, riskCount = 1) {
   const hpCards = [];
@@ -11,6 +11,7 @@ export default function HP(hpCount = 5, riskCount = 1) {
   return (
     <section className="mb-4 flex flex-row gap-2 items-center justify-center">
       {hpCards}
+      <HPCard />
     </section>
   );
 }

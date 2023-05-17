@@ -1,9 +1,9 @@
-import Cards from "./Cards";
-import RiskCards from "./RiskCards";
-import HP from "./HP";
-import Controls from "./Controls";
-import Forfeit from "./Forfeit";
-import Dialogue from "./Dialogue";
+import Cards from './Cards';
+import RiskCards from './RiskCards';
+import HP from './HP';
+import Controls from './Controls';
+import Forfeit from './Forfeit';
+import Dialogue from './Dialogue';
 
 export default function GameLayout() {
   return (
