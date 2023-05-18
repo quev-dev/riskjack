@@ -30,7 +30,7 @@ export default function Nav() {
   return (
     <nav
       id="navbar"
-      className="flex sticky top-0 justify-between items-center px-8 py-3 animate__animated animate__fadeInDown"
+      className="flex sticky top-0 justify-between items-center px-8 py-3"
     >
       <h4 id="nav-title">Riskjack</h4>
       {!showHamburger && (

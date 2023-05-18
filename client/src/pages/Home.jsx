@@ -1,5 +1,4 @@
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
+import Layout from '../layouts/Layout.jsx';
 import Divider from '../components/Divider';
 import Sockets from '../components/Sockets';
 
@@ -9,9 +8,7 @@ export default function Home({ socket }) {
   setPageTitle('Home - Riskjack');
 
   return (
-    <main id="home">
-      <Nav />
-
+    <Layout pageID="home">
       <header className="flex flex-col text-center my-12 mx-8">
         <h1>Riskjack</h1>
         <p className="text-xl">
@@ -56,8 +53,6 @@ export default function Home({ socket }) {
       </section>
 
       <Divider />
-
-      <Footer />
-    </main>
+    </Layout>
   );
 }

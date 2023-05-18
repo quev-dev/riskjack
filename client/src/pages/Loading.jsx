@@ -1,7 +1,9 @@
 export default function Loading() {
   return (
-    <aside>
-      <p>Loading...</p>
-    </aside>
+    <section id="loading-page" className="box-info">
+      <div id="loading-message-container">
+        <p>Loading...</p>
+      </div>
+    </section>
   );
 }

@@ -1,5 +1,4 @@
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
+import Layout from '../layouts/Layout.jsx';
 import icSearch from '../content/svgs/search.svg';
 
 import { setPageTitle } from '../utils/setPageTitle.js';
@@ -13,8 +12,7 @@ export default function FindGame({ socket }) {
   };
 
   return (
-    <div id="page">
-      <Nav />
+    <Layout pageID="page">
       <header className="text-center my-12">
         <h2>Find an Opponent</h2>
       </header>
@@ -49,7 +47,6 @@ export default function FindGame({ socket }) {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
