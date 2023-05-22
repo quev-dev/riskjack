@@ -17,6 +17,10 @@ socket.on('pass_ids', (userID, gameID) => {
   sessionStorage.setItem('game_id', gameID);
 });
 
+socket.on('redirectClient', (url) => {
+  window.location.href = url;
+});
+
 const Home = lazy(() => import('./pages/Home'));
 const Practice = lazy(() => import('./pages/Practice'));
 const FindGame = lazy(() => import('./pages/FindGame'));
@@ -31,7 +35,15 @@ export default function App() {
           <Route path="/" element={<Home socket={socket} />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/find-game" element={<FindGame socket={socket} />} />
-          <Route path="/room/:id" element={<Room socket={socket} />} />
+          <Route
+            path="/room/:id"
+            element={
+              <Room
+                socket={socket}
+                gameID={sessionStorage.getItem('game_id')}
+              />
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

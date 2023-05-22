@@ -116,6 +116,11 @@ input {
     outline: none;
   }
 }
+input:disabled,
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .activated {
   opacity: 1;
@@ -129,6 +134,18 @@ input {
 .inactive {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.font-code {
+  font-family: $font-code;
+}
+
+.highlighted-text {
+  color: $c-accent;
+}
+
+.notification {
+  animation: anim-notify 2s ease forwards;
 }
 
 // .divider {

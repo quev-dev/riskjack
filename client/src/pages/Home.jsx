@@ -21,7 +21,7 @@ export default function Home({ socket }) {
 
       <Sockets socket={socket}></Sockets>
 
-      <article className="flex flex-col gap-4 m-8 box-info p-8 md:w-1/2 md:mx-auto">
+      <article className="flex flex-col gap-4 m-8 box-info p-8">
         <h2>How to Play 📜</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor
@@ -33,7 +33,7 @@ export default function Home({ socket }) {
 
       <Divider />
 
-      <section className="flex flex-col gap-1 m-8 md:w-1/2 md:mx-auto">
+      <section className="flex flex-col gap-1 m-8">
         <h2>Practice</h2>
         <p>Practice against an AI to become familiar with the game.</p>
         <a className="max-w-max" href="/practice">
@@ -41,13 +41,13 @@ export default function Home({ socket }) {
         </a>
       </section>
 
-      <section className="flex flex-col gap-1 m-8 md:w-1/2 md:mx-auto">
+      <section className="flex flex-col gap-1 m-8">
         <h2>Play the Game</h2>
         <p>
           Whenever you're ready, you can search for an opponent through a room
           ID or matchmaking queue. Good luck, and play your cards right!
         </p>
-        <a className="max-w-max" href="/search">
+        <a className="max-w-max" href="/find-game">
           Find an Opponent
         </a>
       </section>

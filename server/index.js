@@ -46,6 +46,8 @@ io.on('connection', (socket) => {
         } else {
           console.log('new room created!');
           console.log(res);
+          const URL = `/room/${gameID}`;
+          socket.emit('redirectClient', URL);
         }
       });
       socket.emit('pass_ids', userID, gameID);

@@ -5,7 +5,7 @@ export default function Layout({ children, pageID = '' }) {
   return (
     <div id={pageID}>
       <Nav />
-      <main>{children}</main>
+      <main className="md:w-1/2 md:mx-auto">{children}</main>
       <Footer />
     </div>
   );

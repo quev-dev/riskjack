@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-$font-title: "Noto Serif", sans-serif;
-$font-normal: "Titillium Web", sans-serif;
+$font-title: 'Noto Serif', sans-serif;
+$font-normal: 'Titillium Web', sans-serif;
+$font-code: 'Source Code Pro', monospace;
 
 $c-on-dark-text: white;
 $c-on-dark-background: rgb(31, 24, 31);
