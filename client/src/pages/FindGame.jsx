@@ -1,5 +1,4 @@
 import Layout from '../layouts/Layout.jsx';
-import icSearch from '../content/svgs/search.svg';
 
 import { setPageTitle } from '../utils/setPageTitle.js';
 import { useState, useEffect } from 'react';
@@ -8,14 +7,27 @@ export default function FindGame({ socket }) {
   setPageTitle('Find Game - Riskjack');
 
   const [disableInputs, setDisableInputs] = useState(false);
+  const [noGameFound, setNoGameFound] = useState(false);
+  const [fieldID, setFieldID] = useState('');
 
   const createRoom = () => {
     socket.emit('createRoom');
     setDisableInputs(true);
   };
-
   const closeRoom = () => {
     socket.emit('closeRoom');
+  };
+  const joinRoom = () => {
+    socket.emit('joinRoom', fieldID);
+  };
+
+  const handleInputChange = (event) => {
+    setFieldID(event.target.value);
+    if (noGameFound) setNoGameFound(false);
+  };
+  const validateJoin = () => {
+    if (fieldID === '') setNoGameFound(true);
+    else joinRoom();
   };
 
   return (
@@ -24,7 +36,7 @@ export default function FindGame({ socket }) {
         <h2>Find an Opponent</h2>
       </header>
 
-      <section className="md:w-1/2 md:mx-auto flex flex-col gap-4 items-center content-center mx-8 my-12">
+      <section className="flex flex-col gap-4 items-center content-center mx-8 my-12">
         <div className="w-full flex flex-col gap-2">
           <h3>Random Queue</h3>
           <p>Search for a random player.</p>
@@ -54,11 +66,22 @@ export default function FindGame({ socket }) {
           <h3>Join Room</h3>
           <p>Provide the correct password to join a private room.</p>
           <div>
-            <input type="text" disabled={disableInputs} />
-            <button className="ml-2 relative top-1" disabled={disableInputs}>
-              <img src={icSearch} alt="Search Icon" />
+            <input
+              onChange={handleInputChange}
+              type="text"
+              disabled={disableInputs}
+            />
+            <button
+              onClick={validateJoin}
+              className="ml-2"
+              disabled={disableInputs}
+            >
+              Join Room
             </button>
           </div>
+          {noGameFound && (
+            <aside className="highlighted-text">No game was found.</aside>
+          )}
         </div>
       </section>
     </Layout>

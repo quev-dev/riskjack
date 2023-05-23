@@ -34,6 +34,10 @@ io.on('connection', (socket) => {
   let userID = socket.handshake.headers['user_id'];
   let gameID = socket.handshake.headers['game_id'];
 
+  socket.on('disconnect', () => {
+    console.log(`User Disconnected: ${socket.id}`);
+  });
+
   socket.on('createRoom', () => {
     const gameState = { test: 2 };
 
@@ -46,13 +50,42 @@ io.on('connection', (socket) => {
         } else {
           console.log('new room created!');
           console.log(res);
-          const URL = `/room/${gameID}`;
-          socket.emit('redirectClient', URL);
+          socket.emit('redirectClient', `/room/${gameID}`);
         }
       });
       socket.emit('pass_ids', userID, gameID);
     } else {
       console.log('already in game');
+    }
+  });
+
+  socket.on('joinRoom', (roomID) => {
+    if (!userID) {
+      redisClient.get(roomID, (err, res) => {
+        if (err) console.log(err);
+        else {
+          if (res) {
+            gameID = roomID;
+            socket.emit('redirectClient', `/room/${gameID}`);
+            socket.emit('pass_ids', userID, gameID);
+            socket.to(gameID).emit('opponentJoined');
+            console.log(`User ${userID} has joined room ${gameID}!`);
+          } else {
+            console.log(`Game ID ${roomID} does not exist.`);
+          }
+        }
+      });
+    } else {
+      console.log('Already in a game.');
+    }
+  });
+
+  socket.on('leaveRoom', () => {
+    if (gameID) {
+      socket.leave(gameID);
+      console.log(`User ${userID} has left room ${gameID}.`);
+    } else {
+      console.error('No game instance was found.');
     }
   });
 

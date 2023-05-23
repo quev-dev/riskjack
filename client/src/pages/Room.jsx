@@ -11,6 +11,9 @@ export default function Room({ socket, gameID }) {
   const [disableCopy, setDisableCopy] = useState(false);
   const [gameReady, setGameReady] = useState(false);
 
+  const leaveRoom = () => {
+    socket.emit('leaveRoom');
+  };
   const copyID = () => {
     navigator.clipboard.writeText(gameID);
     setNotifyCopy(true);
@@ -20,6 +23,16 @@ export default function Room({ socket, gameID }) {
       setNotifyCopy(false);
     }, 2000);
   };
+  const beginGame = () => {};
+
+  useEffect(() => {
+    socket.on('opponentJoined', () => {
+      setGameReady(true);
+    });
+    return () => {
+      socket.off('opponentJoined');
+    };
+  }, []);
 
   return (
     <Layout>
@@ -30,6 +43,9 @@ export default function Room({ socket, gameID }) {
           Once an opponent joins, you can click 'Begin Game' to initiate the
           match.
         </p>
+        <button onClick={leaveRoom} className="max-w-max">
+          Leave Room
+        </button>
       </header>
       <Divider />
       <article className="flex flex-col gap-2 m-8">
