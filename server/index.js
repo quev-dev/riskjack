@@ -39,7 +39,10 @@ io.on('connection', (socket) => {
   });
 
   socket.on('createRoom', () => {
-    const gameState = { test: 2 };
+    const gameState = {
+      host: userID,
+      test: 2,
+    };
 
     if (!userID) {
       userID = nanoid();
@@ -83,6 +86,7 @@ io.on('connection', (socket) => {
   socket.on('leaveRoom', () => {
     if (gameID) {
       socket.leave(gameID);
+      socket.emit('redirectClient', `/find-game`);
       console.log(`User ${userID} has left room ${gameID}.`);
     } else {
       console.error('No game instance was found.');

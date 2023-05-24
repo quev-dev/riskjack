@@ -1,33 +1,42 @@
-import icTwitter from "../content/svgs/twitter.svg";
-import icInstagram from "../content/svgs/instagram.svg";
-import icFacebook from "../content/svgs/facebook.svg";
+import icTwitter from '../content/svgs/twitter.svg';
+import icInstagram from '../content/svgs/instagram.svg';
+import icFacebook from '../content/svgs/facebook.svg';
 
 export default function Footer() {
   return (
     <footer id="footer-container" className="p-4">
       <section className="m-4">
-        <h5>&copy; QuevDev 2023</h5>
+        <h6>&copy; QuevDev 2023</h6>
         <p>All rights reserved.</p>
       </section>
 
       <section className="m-4">
-        <h5>Resources Used:</h5>
+        <p>Technologies used to create this site:</p>
         <ul>
           <li>
-            <a href="">Link</a>
+            <a rel="norefferer" target="_blank" href="https://socket.io/">
+              socket.io
+            </a>
           </li>
           <li>
-            <a href="">Link</a>
+            <a rel="norefferer" target="_blank" href="https://react.dev/">
+              React
+            </a>
           </li>
           <li>
-            <a href="">Link</a>
+            <a rel="norefferer" target="_blank" href="https://expressjs.com/">
+              Express
+            </a>
+          </li>
+          <li>
+            <a rel="norefferer" target="_blank" href="https://redis.io/">
+              Redis
+            </a>
           </li>
         </ul>
       </section>
 
       <section className="m-4">
-        <h6>Share on Social Media</h6>
-        <p className="mb-3">Any support is greatly appreciated.</p>
         <ul className="flex flex-row gap-2">
           <li>
             <button>

@@ -59,7 +59,9 @@ export default function FindGame({ socket }) {
           >
             Create Room
           </button>
-          <button onClick={closeRoom}>[Test] Close Room</button>
+          <button className="max-w-max" onClick={closeRoom}>
+            [TEST] Close Room
+          </button>
         </div>
 
         <div className="w-full flex flex-col gap-2">

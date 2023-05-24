@@ -148,6 +148,7 @@ button:disabled {
   animation: anim-notify 2s ease forwards;
 }
 
-// .divider {
-//   scale: 25%;
-// }
+#animated-hourglass {
+  animation: anim-rotate-overshoot 2s infinite;
+  animation-timing-function: ease;
+}
