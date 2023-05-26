@@ -54,6 +54,9 @@ io.on('connection', (socket) => {
           console.log('new room created!');
           console.log(res);
           socket.emit('redirectClient', `/room/${gameID}`);
+
+          console.log('Host for room: ', userID);
+          socket.emit('hostCreated', userID);
         }
       });
       socket.emit('pass_ids', userID, gameID);
@@ -69,6 +72,7 @@ io.on('connection', (socket) => {
         else {
           if (res) {
             gameID = roomID;
+            socket.emit('joinedRoom');
             socket.emit('redirectClient', `/room/${gameID}`);
             socket.emit('pass_ids', userID, gameID);
             socket.to(gameID).emit('opponentJoined');
@@ -87,6 +91,8 @@ io.on('connection', (socket) => {
     if (gameID) {
       socket.leave(gameID);
       socket.emit('redirectClient', `/find-game`);
+      socket.emit('leftRoom');
+      socket.to(gameID).emit('opponentLeft');
       console.log(`User ${userID} has left room ${gameID}.`);
     } else {
       console.error('No game instance was found.');

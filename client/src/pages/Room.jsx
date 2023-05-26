@@ -7,7 +7,11 @@ import { useState, useEffect } from 'react';
 
 import icClipboardCheck from '../content/svgs/clipboard-check.svg';
 
-export default function Room({ socket, gameID, joinedRoom = false }) {
+export default function Room({
+  socket,
+  gameID,
+  joinedRoom = sessionStorage.getItem('joined_room'),
+}) {
   setPageTitle('Waiting Room - Riskjack');
 
   const [notifyCopy, setNotifyCopy] = useState(false);
